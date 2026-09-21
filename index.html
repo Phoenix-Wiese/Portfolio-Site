@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Phoenix Wiese · Portfolio</title>
+<meta name="description" content="Portfolio of Phoenix Wiese - Student Software Developer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== Header / Nav ===== -->
+  <header class="site-header" id="header">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">&lt;<span>PW</span>/&gt;.</a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link">Contacts</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="btn btn-small btn-primary" id="navContactBtn">Message</button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section id="home" class="hero">
+      <div class="hero-ambient"></div>
+      <svg class="hero-lines" viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="heroLineGradient" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0%" style="stop-color:var(--primary)" />
+            <stop offset="100%" style="stop-color:var(--secondary)" />
+          </linearGradient>
+          <path id="heroSwooshA" d="M -120 640 C 110 640, 110 350, 340 350 C 570 350, 570 60, 800 60" />
+          <path id="heroSwooshB" d="M 240 -60 C 410 150, 410 260, 620 260 C 830 260, 830 90, 1060 90" />
+          <path id="heroSwooshC" d="M 0 10 C 1010 150, 410 260, 620 260 C 830 260, 830 90, 1060 90" />
+        </defs>
+        <g class="hero-lines-strokes">
+          <use href="#heroSwooshA" transform="translate(0,0)" />
+          <use href="#heroSwooshA" transform="translate(4,-2.5)" />
+          <use href="#heroSwooshA" transform="translate(8,-5)" />
+          <use href="#heroSwooshA" transform="translate(12,-7.5)" />
+          <use href="#heroSwooshA" transform="translate(16,-10)" />
+          <use href="#heroSwooshA" transform="translate(20,-12.5)" />
+          <use href="#heroSwooshA" transform="translate(24,-15)" />
+          <use href="#heroSwooshA" transform="translate(28,-17.5)" />
+          <use href="#heroSwooshA" transform="translate(32,-20)" />
+          <use href="#heroSwooshA" transform="translate(36,-22.5)" />
+          <use href="#heroSwooshA" transform="translate(40,-25)" />
+          <use href="#heroSwooshA" transform="translate(44,-27.5)" />
+          <use href="#heroSwooshA" transform="translate(48,-30)" />
+          <use href="#heroSwooshA" transform="translate(52,-32.5)" />
+          <use href="#heroSwooshA" transform="translate(56,-35)" />
+          <use href="#heroSwooshA" transform="translate(60,-37.5)" />
+          <use href="#heroSwooshB" transform="translate(0,0)" />
+          <use href="#heroSwooshB" transform="translate(3,-2)" />
+          <use href="#heroSwooshB" transform="translate(6,-4)" />
+          <use href="#heroSwooshB" transform="translate(9,-6)" />
+          <use href="#heroSwooshB" transform="translate(12,-8)" />
+          <use href="#heroSwooshB" transform="translate(15,-10)" />
+          <use href="#heroSwooshB" transform="translate(18,-12)" />
+          <use href="#heroSwooshB" transform="translate(21,-14)" />
+          <use href="#heroSwooshB" transform="translate(24,-16)" />
+          <use href="#heroSwooshB" transform="translate(27,-18)" />
+          <use href="#heroSwooshB" transform="translate(30,-20)" />
+          <use href="#heroSwooshB" transform="translate(33,-22)" />
+          <use href="#heroSwooshC" transform="translate(0,0)" />
+          <use href="#heroSwooshC" transform="translate(3,-2)" />
+          <use href="#heroSwooshC" transform="translate(6,-4)" />
+          <use href="#heroSwooshC" transform="translate(9,-6)" />
+          <use href="#heroSwooshC" transform="translate(12,-8)" />
+          <use href="#heroSwooshC" transform="translate(15,-10)" />
+          <use href="#heroSwooshC" transform="translate(18,-12)" />
+          <use href="#heroSwooshC" transform="translate(21,-14)" />
+          <use href="#heroSwooshC" transform="translate(24,-16)" />
+          <use href="#heroSwooshC" transform="translate(27,-18)" />
+          <use href="#heroSwooshC" transform="translate(30,-20)" />
+          <use href="#heroSwooshC" transform="translate(33,-22)" />
+        </g>
+      </svg>
+      <div class="container hero-inner">
+        <p class="eyebrow">Hi, my name is</p>
+        <h1 class="hero-title">Phoenix Wiese</h1>
+        <h2 class="hero-subtitle">I build <span class="gradient-text">delightful, high-performance</span> webpages and computer vision models.</h2>
+        <p class="hero-text">
+          Software engineering student focused on web development and ML technologies. I am excited to learn and grow my skills through hands-on projects and collaboration.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <button class="btn btn-outline" id="heroContactBtn">Get In Touch</button>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/Phoenix-Wiese" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.33-1.75c-1.09-.74.08-.73.08-.73a2.52 2.52 0 0 1 1.84 1.24 2.55 2.55 0 0 0 3.49 1 2.55 2.55 0 0 1 .76-1.6c-2.67-.3-5.47-1.33-5.47-5.93a4.64 4.64 0 0 1 1.24-3.22 4.3 4.3 0 0 1 .12-3.18s1-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23a4.3 4.3 0 0 1 .12 3.18 4.64 4.64 0 0 1 1.24 3.22c0 4.61-2.81 5.63-5.48 5.92a2.86 2.86 0 0 1 .82 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/phoenix-wiese-ross" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
+          </a>
+          <a href="https://twitter.com/example" target="_blank" rel="noopener" aria-label="Twitter / X">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2h3.2l-7 8 8.2 12h-6.4l-5-6.6-5.8 6.6H2l7.5-8.6L1.7 2h6.5l4.5 6z"/></svg>
+          </a>
+        </div>
+      </div>
+      <a href="#about" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="tag-num">01.</span> About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Im a student software engineer with a passion for learning and seeing ideas come to life. I enjoy a variety of web technologies and am eager to learn more about real-world software production in a team.
+            </p>
+            <p>
+              Over the years I've worked on various small projects as IT captian at my school, where i introduced web-development to younger students and helped them build their own websites. Ive also had the amazing opportunity to work with Monash Automation student team where i built edge case computer vision models in a team on the intersection of many engineering disciplines.
+            </p>
+            <ul class="about-list">
+
+              <li>Comfortable across front-end, back-end &amp; DevOps. Currently focused on growing my experience in testing and CI/CD</li>
+              <li>Bachelor in Computer Science / Bachelor of Engineering (Honours) (Monash University)</li>
+              <li>Based in Victoria, Australia, open to travel</li>
+            </ul>
+          </div>
+          <div class="about-photo">
+            <div class="photo-frame">
+              <div class="photo-placeholder logo"><p>&lt;<span>PW</span>/&gt;</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title"><span class="tag-num">02.</span> Skills</h2>
+        <div class="skills-grid" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title"><span class="tag-num">03.</span> Projects</h2>
+        <p class="section-sub">Click a card to see more details. Filter by technology below.</p>
+
+        <div class="filter-bar" id="filterBar">
+          <!-- tag filter buttons injected by JS -->
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+          <!-- project cards injected by JS -->
+        </div>
+
+        <p class="no-results" id="noResults" hidden>No projects match the selected filters.</p>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section section-alt contact-section">
+      <div class="container">
+        <h2 class="section-title"><span class="tag-num">04.</span> Get In Touch</h2>
+        <p class="section-sub contact-intro">
+          I'm currently open to new opportunities and collaborations. Whether you have a
+          question or just want to say hi, my inbox is always open.
+        </p>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:hello@example.com">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">phoenix.ross@outlook.com.au</span>
+            </div>
+          </a>
+          <a class="contact-card" href="tel:+10000000000">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.34 1.79.65 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.22a2 2 0 0 1 2.11-.45c.86.31 1.75.53 2.65.65A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">+61 411 799 064</span>
+            </div>
+          </a>
+          <a class="contact-card" href="https://maps.google.com" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Melbourne, Victoria, Australia</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="contact-cta">
+          <button class="btn btn-primary btn-large" id="contactSectionBtn">Send Me a Message</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Phoenix Wiese. Built with HTML, CSS &amp; JS.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/example" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.33-1.75c-1.09-.74.08-.73.08-.73a2.52 2.52 0 0 1 1.84 1.24 2.55 2.55 0 0 0 3.49 1 2.55 2.55 0 0 1 .76-1.6c-2.67-.3-5.47-1.33-5.47-5.93a4.64 4.64 0 0 1 1.24-3.22 4.3 4.3 0 0 1 .12-3.18s1-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23a4.3 4.3 0 0 1 .12 3.18 4.64 4.64 0 0 1 1.24 3.22c0 4.61-2.81 5.63-5.48 5.92a2.86 2.86 0 0 1 .82 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/example" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.67H9.34V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56z"/></svg>
+        </a>
+        <a href="mailto:hello@example.com" aria-label="Email">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Project Detail Modal ===== -->
+  <div class="modal-overlay" id="projectModal" hidden>
+    <div class="modal project-modal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+      <button class="modal-close" id="projectModalClose" aria-label="Close">&times;</button>
+
+      <div class="gallery" id="projectGallery">
+        <button class="gallery-arrow gallery-prev" id="galleryPrev" aria-label="Previous image">&#10094;</button>
+        <div class="gallery-track" id="galleryTrack"></div>
+        <button class="gallery-arrow gallery-next" id="galleryNext" aria-label="Next image">&#10095;</button>
+        <div class="gallery-dots" id="galleryDots"></div>
+      </div>
+
+      <div class="modal-body">
+        <h3 id="projectModalTitle"></h3>
+        <div class="modal-tags" id="projectModalTags"></div>
+        <p id="projectModalDesc"></p>
+        <div class="modal-actions">
+          <a id="projectModalRepo" class="btn btn-outline" target="_blank" rel="noopener">
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a12 12 0 0 0-3.79 23.4c.6.1.82-.26.82-.58v-2.02c-3.34.72-4.04-1.61-4.04-1.61a3.18 3.18 0 0 0-1.33-1.75c-1.09-.74.08-.73.08-.73a2.52 2.52 0 0 1 1.84 1.24 2.55 2.55 0 0 0 3.49 1 2.55 2.55 0 0 1 .76-1.6c-2.67-.3-5.47-1.33-5.47-5.93a4.64 4.64 0 0 1 1.24-3.22 4.3 4.3 0 0 1 .12-3.18s1-.32 3.3 1.23a11.4 11.4 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23a4.3 4.3 0 0 1 .12 3.18 4.64 4.64 0 0 1 1.24 3.22c0 4.61-2.81 5.63-5.48 5.92a2.86 2.86 0 0 1 .82 2.22v3.29c0 .32.22.69.83.58A12 12 0 0 0 12 .5z"/></svg>
+            View Repository
+          </a>
+          <a id="projectModalPdf" class="btn btn-primary" download>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 21h16"/></svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Contact Modal ===== -->
+  <div class="modal-overlay" id="contactModal" hidden>
+    <div class="modal contact-modal" role="dialog" aria-modal="true" aria-labelledby="contactModalTitle">
+      <button class="modal-close" id="contactModalClose" aria-label="Close">&times;</button>
+      <h3 id="contactModalTitle">Send Me a Message</h3>
+      <p class="modal-sub">Fill out the form below and I'll get back to you as soon as possible.</p>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label>
+          Name
+          <input type="text" name="name" id="cf-name" required maxlength="100" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" id="cf-email" required maxlength="150" />
+        </label>
+        <label>
+          Message
+          <textarea name="message" id="cf-message" rows="5" required maxlength="2000"></textarea>
+        </label>
+        <p class="form-error" id="formError" hidden></p>
+        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
