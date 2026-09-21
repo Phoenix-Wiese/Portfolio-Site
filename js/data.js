@@ -13,62 +13,45 @@ const SKILLS = [
 const PROJECTS = [
   {
     id: "proj-1",
-    title: "Realtime Chat App",
-    shortDesc: "A scalable realtime messaging app with rooms, presence, and typing indicators.",
-    longDesc: "A full-featured realtime chat application supporting multiple rooms, user presence, typing indicators, and message history. Built with a WebSocket-based backend for low-latency delivery and a responsive front-end that works across devices. This is placeholder description text — replace it with real project details, challenges you solved, and the impact it had.",
-    tags: ["React", "Node.js", "WebSocket", "MongoDB"],
-    images: [],
-    repo: "https://github.com/example/realtime-chat",
-    pdf: "assets/docs/project-overview.pdf"
+    title: "Docusign imitation app",
+    shortDesc: "A scalable realtime document signing app. Based on Docusign.",
+    longDesc: "A full-featured realtime document signing application supporting multiple documents, user presence, signing indicators, and document history. The app uses React and supabase for real-time updates. These app was my first built using AI and was intended to see how quickly pre-planned designs and decisions coud be implemented. I found it a good learning experience with some feedback/notes to improve on. Whilst the AI generated initial features fast for the front end it struggled to succesfully pair with the backend logic and real-time synchronization, requiring manual troubleshooting. Additionally i used 41% of my monthly copilot tokens in 3 hours of coding and debugging.",
+    tags: ["React", "SQL","Supabase"],
+    images: [
+      "assets/images/proj-1/image.png",
+      "assets/images/proj-1/2.png",
+      "assets/images/proj-1/3.png",
+      "assets/images/proj-1/4.png",
+      "assets/images/proj-1/5.png"
+    ],
+    repo: "https://docusign-1.ai.studio/"
   },
   {
     id: "proj-2",
-    title: "E-Commerce Dashboard",
-    shortDesc: "An admin dashboard for managing products, orders, and analytics.",
-    longDesc: "A data-rich admin dashboard for an e-commerce platform, featuring product management, order tracking, and sales analytics with interactive charts. Focused on performance with large data sets and a clean, accessible UI. Replace this placeholder text with your own write-up.",
-    tags: ["TypeScript", "React", "SQL", "Docker"],
-    images: [],
-    repo: "https://github.com/example/ecommerce-dashboard",
-    pdf: "assets/docs/project-overview.pdf"
+    title: "Python car park counter",
+    shortDesc: "A Python application to count cars in a parking lot using computer vision.",
+    longDesc: "A Python-based car park counter that uses computer vision techniques to detect and count vehicles entering and exiting a parking lot. The system provides real-time analytics and historical data tracking. Bounding boxes where used to set car park spaces while cars were reduced into a gradient map via adaptive thresholding. Pixels where them summed to determine occupancy for a given parking space.",
+    tags: ["Python", "OpenCV"],
+    images: [
+      "assets/images/proj-2/image.png",
+      "assets/images/proj-2/2.png",
+      "assets/images/proj-2/3.png",
+      "assets/images/proj-2/video.mp4"
+    ],
+    repo: "https://github.com/Phoenix-Wiese/CarParkVision"
   },
   {
     id: "proj-3",
-    title: "ML Image Classifier",
-    shortDesc: "A Python-based image classification service exposed via a REST API.",
-    longDesc: "An image classification service built with a convolutional neural network, wrapped in a REST API for easy integration. Includes a training pipeline, model versioning, and a lightweight web front-end to test predictions live. Dummy content — swap in your real results, accuracy metrics, and architecture diagram.",
-    tags: ["Python", "AWS", "Docker"],
-    images: [],
-    repo: "https://github.com/example/ml-image-classifier",
-    pdf: "assets/docs/project-overview.pdf"
-  },
-  {
-    id: "proj-4",
-    title: "Personal Finance Tracker",
-    shortDesc: "A budgeting app that syncs transactions and visualizes spending trends.",
-    longDesc: "A personal finance tracker that connects to bank feeds, categorizes transactions automatically, and visualizes monthly spending trends. Includes budget goals, alerts, and exportable reports. This description is a placeholder — describe your real contributions and outcomes here.",
-    tags: ["JavaScript", "Node.js", "MongoDB", "CSS3"],
-    images: [],
-    repo: "https://github.com/example/finance-tracker",
-    pdf: "assets/docs/project-overview.pdf"
-  },
-  {
-    id: "proj-5",
-    title: "DevOps Pipeline Toolkit",
-    shortDesc: "A set of CLI tools to standardize CI/CD pipelines across services.",
-    longDesc: "A toolkit of CLI utilities that generate and validate CI/CD pipeline configuration across dozens of microservices, reducing setup time and configuration drift. Includes templates, linting, and one-command scaffolding. Replace with real details about scale and adoption.",
-    tags: ["Python", "Docker", "AWS", "Git"],
-    images: [],
-    repo: "https://github.com/example/devops-toolkit",
-    pdf: "assets/docs/project-overview.pdf"
-  },
-  {
-    id: "proj-6",
-    title: "Portfolio CMS",
-    shortDesc: "A headless CMS tailored for developer portfolios and case studies.",
-    longDesc: "A lightweight headless CMS purpose-built for developer portfolios, allowing structured case studies, tagged projects, and media galleries to be managed through a simple admin UI. Placeholder text — add your own architecture notes and lessons learned.",
-    tags: ["TypeScript", "React", "SQL"],
-    images: [],
-    repo: "https://github.com/example/portfolio-cms",
-    pdf: "assets/docs/project-overview.pdf"
+    title: "Data visualizer",
+    shortDesc: "A interactive data visualization using javascript and D3.js.",
+    longDesc: "An interactive data visualization tool built using JavaScript and D3.js. It allows users to explore complex datasets through dynamic charts, graphs, and other visual elements. The project emphasizes real-time updates and responsive design for an engaging user experience. This visualization prokect was marked HD and focused on Australia's Iron ore trade economy.",
+    tags: ["JavaScript", "D3.js", "HTML", "CSS"],
+    images: [
+      "assets/images/proj-3/image.png",
+      "assets/images/proj-3/2.png",
+      "assets/images/proj-3/3.png",
+      "assets/images/proj-3/4.png"
+    ],
+    repo: "https://phoenix-wiese.github.io/FIT2179A2/"
   }
 ];

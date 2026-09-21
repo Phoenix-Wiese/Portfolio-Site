@@ -154,18 +154,54 @@
       .map((t) => `<span class="tag-chip">${t}</span>`)
       .join("");
     document.getElementById("projectModalRepo").href = project.repo || "#";
-    document.getElementById("projectModalPdf").href = project.pdf || "#";
 
     const slides = project.images && project.images.length ? project.images : [null];
     galleryLen = slides.length;
     galleryIndex = 0;
-    galleryTrack.innerHTML = slides
-      .map((src, i) =>
-        src
-          ? `<img src="${src}" alt="${project.title} screenshot ${i + 1}" />`
-          : `<div class="gallery-slide">${initials(project.title)}</div>`
-      )
-      .join("");
+    galleryTrack.innerHTML = "";
+    slides.forEach((src, i) => {
+      const slide = document.createElement("div");
+      slide.className = `gallery-slide${i === 0 ? " active" : ""}`;
+      slide.setAttribute("aria-label", `${project.title} screenshot ${i + 1}`);
+
+      if (src) {
+        const isVideo = /\.(mp4|webm|ogg|mov)$/i.test(src);
+
+        if (isVideo) {
+          const video = document.createElement("video");
+          video.src = src;
+          video.type = "video/mp4";
+          video.muted = true;
+          video.playsInline = true;
+          video.autoplay = true;
+          video.loop = true;
+          video.controls = false;
+          video.preload = "metadata";
+          video.addEventListener("error", () => {
+            slide.classList.add("fallback");
+            slide.innerHTML = "";
+            slide.textContent = initials(project.title);
+          });
+          slide.appendChild(video);
+        } else {
+          const img = document.createElement("img");
+          img.src = src;
+          img.alt = `${project.title} screenshot ${i + 1}`;
+          img.loading = "lazy";
+          img.addEventListener("error", () => {
+            slide.classList.add("fallback");
+            slide.innerHTML = "";
+            slide.textContent = initials(project.title);
+          });
+          slide.appendChild(img);
+        }
+      } else {
+        slide.classList.add("fallback");
+        slide.textContent = initials(project.title);
+      }
+
+      galleryTrack.appendChild(slide);
+    });
     galleryDots.innerHTML = slides
       .map((_, i) => `<button class="gallery-dot${i === 0 ? " active" : ""}" data-index="${i}" aria-label="Go to image ${i + 1}"></button>`)
       .join("");
@@ -180,14 +216,13 @@
 
   function setGallerySlide(index) {
     galleryIndex = (index + galleryLen) % galleryLen;
-    galleryTrack.style.transform = `translateX(-${galleryIndex * 100}%)`;
+    document.querySelectorAll(".gallery-slide").forEach((slide, i) =>
+      slide.classList.toggle("active", i === galleryIndex)
+    );
     document.querySelectorAll(".gallery-dot").forEach((dot, i) =>
       dot.classList.toggle("active", i === galleryIndex)
     );
   }
-  galleryTrack.style.display = "flex";
-  galleryTrack.style.transition = "transform 0.3s ease";
-  Array.from(galleryTrack.children).forEach(() => {});
   galleryPrev.addEventListener("click", () => setGallerySlide(galleryIndex - 1));
   galleryNext.addEventListener("click", () => setGallerySlide(galleryIndex + 1));
 
